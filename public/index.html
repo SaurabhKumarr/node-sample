@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="js/loginController.js"></script>
+        <script src="js/loginService.js"></script>
+    </head>
+    <body ng-app="app" ng-controller="loginController">
+        <h1>demo</h1>
+        <div>
+            Name: <input type="text" ng-model="userSchema.name"/>
+            User Name: <input type="text" ng-model="userSchema.userName"/>
+            Password: <input type="text" ng-model="userSchema.password"/>
+        </div>
+        </br>
+        <div ng-repeat="info in data">
+            <div ng-click="removeData(info)">{{info.name}}-{{info.username}}-{{info.password}}</div>    
+        </div> 
+        <button ng-click="login()">login</button>
+    </body>
+</html>
